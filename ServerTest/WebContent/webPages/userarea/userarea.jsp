@@ -44,7 +44,7 @@ body {
 <img alt="点击可以关闭" src="image/icon/closepopwinbtn.png" width="20px" height="20px;"> 
 </div> 
   
-<div class="tips_content"> 
+<div class="content"> 
 <img alt="" src="image/tips.png" width="115px" height="115px" style="position: absolute; margin-left: 80px;margin-right: 80px;margin-top: 0px;"> 
 	<div class="content_wenzi" ><span >请先登录用户</span> </div>
 </div> 
@@ -190,11 +190,11 @@ body {
 			<div class="intro intro1">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>管理员</p>
 						</a>
 						<p>
@@ -227,11 +227,11 @@ body {
 			<div class="intro">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>admin3</p>
 						</a>
 						<p>
@@ -264,11 +264,11 @@ body {
 			<div class="intro">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>admin4</p>
 						</a>
 						<p>
@@ -306,11 +306,11 @@ body {
 			<div class="intro intro1">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>税务人员</p>
 						</a>
 						<p>
@@ -343,11 +343,11 @@ body {
 			<div class="intro">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>admin2</p>
 						</a>
 						<p>
@@ -380,11 +380,11 @@ body {
 			<div class="intro">
 				<div class="intro_floor1">
 					<div class="intro_floor1_left">
-						<a href=""> <img src="image/u2815.png">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png">
 						</a>
 					</div>
 					<div class="intro_floor1_right">
-						<a href="">
+						<a href="webPages/userarea/personIntro.jsp">
 							<p>test2</p>
 						</a>
 						<p>
@@ -426,11 +426,11 @@ body {
 			<div class="_4_shili_down">
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>管理员</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>管理员</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -447,11 +447,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>管理员</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>管理员</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -468,11 +468,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>管理员</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>管理员</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -489,11 +489,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>管理员</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>管理员</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -522,11 +522,11 @@ body {
 			<div class="_4_shili_down">
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>机构名</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>机构名</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -543,11 +543,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>机构名</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>机构名</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -564,11 +564,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>机构名</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>机构名</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -585,11 +585,11 @@ body {
 				</div>
 				<div class="_4_shili_list">
 					<div class="touxiang">
-						<a href=""> <img src="image/u2815.png" alt="picture">
+						<a href="webPages/userarea/personIntro.jsp"> <img src="image/u2815.png" alt="picture">
 						</a>
 					</div>
 					<div class="yonghuming">
-						<a href=""> <span>用户名:</span> <span>机构名</span>
+						<a href="webPages/userarea/personIntro.jsp"> <span>用户名:</span> <span>机构名</span>
 						</a>
 					</div>
 					<div class="paiming">
@@ -616,20 +616,20 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>&nbsp;</div></a></td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -637,10 +637,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -648,10 +648,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -659,10 +659,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -670,10 +670,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -681,10 +681,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -692,10 +692,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -703,10 +703,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
@@ -714,10 +714,10 @@ body {
 				<tr>
 					<td class="_5_dati_td1"><a href=""><div>hhhhhh呵呵哈哈哈</div></a>
 					</td>
-					<td class="_5_dati_td2"><a href=""> <img
+					<td class="_5_dati_td2"><a href="webPages/userarea/personIntro.jsp"> <img
 							src="image/u2815.png" alt="picture">
 					</a></td>
-					<td class="_5_dati_td3"><a href=""> 管理员Q </a></td>
+					<td class="_5_dati_td3"><a href="webPages/userarea/personIntro.jsp"> 管理员Q </a></td>
 					<td class="_5_dati_td4">
 						<p>2018-07-05</p>
 					</td>
