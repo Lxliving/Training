@@ -37,3 +37,62 @@ function chooseI(i) {
         shili[0].className="_4_shili Notdisplay";
     }
 }
+
+//个人专区界面，tab的左右切换效果
+function chooseLorR(i) {
+    var ask_title=document.getElementById('tab_li1');
+    var answer_title=document.getElementById('tab_li2');
+    var send_invite_title=document.getElementById('tab_li3');
+    var receive_invite_title=document.getElementById('tab_li4');
+    var jiedu_share_title=document.getElementById('tab_li5');
+    var shoucang_title=document.getElementById('tab_li6');
+    var ask=document.getElementById('tab_content1');
+    var answer=document.getElementById('tab_content2');
+    var send_invite=document.getElementById('tab_content3');
+    var receive_invite=document.getElementById('tab_content4');
+    var jiedu_share=document.getElementById('tab_content5');
+    var shoucang=document.getElementById('tab_content6');
+
+    if (i == 1){
+        /*点击-提问*/
+        ask_title.className="tab_li_active";
+        ask.className="tab_content";
+        answer_title.className="";
+        answer.className="tab_content Notdisplay";
+    }
+    else if (i == 2){
+        /*点击-回答*/
+        answer_title.className="tab_li_active";
+        answer.className="tab_content";
+        ask_title.className="";
+        ask.className="tab_content Notdisplay";
+    }
+    else if (i == 3){
+        /*点击-发出的邀请*/
+        send_invite_title.className="tab_li_active";
+        send_invite.className="tab_content";
+        receive_invite_title.className="";
+        receive_invite.className="tab_content Notdisplay";
+    }
+    else if (i == 4){
+        /*点击-收到的邀请*/
+        receive_invite_title.className="tab_li_active";
+        receive_invite.className="tab_content";
+        send_invite_title.className="";
+        send_invite.className="tab_content Notdisplay";
+    }
+    else if (i == 5){
+        /*点击-解读和分享*/
+        jiedu_share_title.className="tab_li_active";
+        jiedu_share.className="tab_content";
+        shoucang_title.className="";
+        shoucang.className="tab_content Notdisplay";
+    }
+    else if (i == 6){
+        /*点击-收藏*/
+        shoucang_title.className="tab_li_active";
+        shoucang.className="tab_content";
+        jiedu_share_title.className="";
+        jiedu_share.className="tab_content Notdisplay";
+    }
+}
