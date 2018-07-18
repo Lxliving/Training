@@ -450,6 +450,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <!--//邀请-->
         </div>
         <!--//第二部分-->
+        <div class="clearfix"></div>
         <!--第三部分-->
         <div class="models3">
             <!--解读和分享-->
