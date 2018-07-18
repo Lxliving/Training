@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.tax.comm.*;
 import com.tax.vo.*;
@@ -106,6 +107,31 @@ public class DB_read {
 		}
 		return rea;
 	}
-
+	public ArrayList<read> Query() {
+		String sql = "select * from read order by seenNum desc";
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		ArrayList<read> al = new ArrayList<read>();
+		
+		try {
+			pstm = db.getConPst(sql);
+			rs = pstm.executeQuery();
+			while(rs.next()) {
+				read rea = new read();
+				rea.setReadID(rs.getString("readID"));
+				rea.setReadName(rs.getString("readName"));
+				rea.setSeenNum(rs.getInt("seenNum"));
+				rea.setKeptNum(rs.getInt("keptNum"));
+				rea.setDate(rs.getDate("date"));
+				rea.setText(rs.getString("text"));
+				al.add(rea);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.close(pstm, null);
+		}
+		return al;
+	}
 	
 }
