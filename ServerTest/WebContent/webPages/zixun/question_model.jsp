@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <img alt="点击可以关闭" src="image/icon/closepopwinbtn.png" width="20px" height="20px;"> 
 </div> 
   
-<div class="content"> 
+<div class="tips_content"> 
 <img alt="" src="image/tips.png" width="115px" height="115px" style="position: absolute; margin-left: 80px;margin-right: 80px;margin-top: 0px;"> 
 	<div class="content_wenzi" ><span >请先登录用户</span> </div>
 </div> 

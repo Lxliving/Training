@@ -192,7 +192,7 @@ System.out.println(hasLogin);
 		<img alt="" src="images/right.png" style="width: 65px;">
 	</div>
 	<div class="customer_service">
-		<a href="/lagsms/user/customer" target="_blank" class="luan_kefu">
+		<a href="webPages/jiedu/kefu.jsp" target="_blank" class="luan_kefu">
 			<img alt="" src="images/customer.png"
 			style="width: 100%; cursor: pointer;" />
 		</a>
