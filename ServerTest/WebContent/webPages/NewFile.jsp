@@ -7,6 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="<%=basePath%>">
+<!-- this is 首页 -->
 <title>安徽省国家税务局税企互助交流平台</title>
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -160,7 +161,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="customer_service">
 		<a href="/lagsms/user/customer" target="_blank" class="luan_kefu">
 			<img alt="" src="images/customer.png"
-			style="width: 20%; cursor: pointer;" />
+			style="width: 100%; cursor: pointer;" />
 		</a>
 	</div>
 </div>
