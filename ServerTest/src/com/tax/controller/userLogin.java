@@ -54,7 +54,7 @@ public class userLogin extends HttpServlet {
 		if(dbu.loginVerify(userID, psw)) {
 			System.out.println("登陆成功");
 			hasLogined = true;
-			request.getSession().setAttribute("userID", userID);
+			request.getSession().setAttribute("username", userID);
 			request.getSession().setAttribute("hasLogined", hasLogined);
 			response.sendRedirect("webPages/NewFile.jsp");
 			
