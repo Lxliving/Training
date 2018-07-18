@@ -145,32 +145,35 @@ body {
 					<div id="exSharingContainer">
 		    			<div class="exSharingContent">
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.1</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:管理员</a></li><li class="jifen fl">积分:89</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:税务人员</a></li><li class="jifen fl">积分:50</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.2</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:admin3</a></li><li class="jifen fl">积分:4</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:admin2</a></li><li class="jifen fl">积分:40</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.3</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:admin4</a></li><li class="jifen fl">积分:3</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:机构用户</a></li><li class="jifen fl">积分:</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.4</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:admin9</a></li><li class="jifen fl">积分:</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:guanli3</a></li><li class="jifen fl">积分:</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.5</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:李志</a></li><li class="jifen fl">积分:</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:guanli2</a></li><li class="jifen fl">积分:</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.6</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:李志明</a></li><li class="jifen fl">积分:</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:guanli1</a></li><li class="jifen fl">积分:</li></ul>
 		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.7</li><li class="org_name fl" =""="">
-		    			<a href="webPages/userarea/personIntro.jsp">专家名:lee</a></li><li class="jifen fl">积分:</li></ul>
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:test8</a></li><li class="jifen fl">积分:</li></ul>
+		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.8</li><li class="org_name fl" =""="">
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:test4</a></li><li class="jifen fl">积分:</li></ul>
+		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.9</li><li class="org_name fl" =""="">
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:test3</a></li><li class="jifen fl">积分:</li></ul>
+		    			<ul class="clearfix expert_ul"><li class="fl uesr_paihang">NO.10</li><li class="org_name fl" =""="">
+		    			<a href="webPages/userarea/personIntro.jsp">机构名:test2</a></li><li class="jifen fl">积分:</li></ul>
 		    			</div>
-			    		<div id="exSharingPage" class="box" style="display: none;">
+			    		<div id="exSharingPage" class="box">
 			    		<button type="button" id="firstPage" class="turnPage first-page">首页</button>
-			    		<button class="turnPage" id="prePage">上一页</button>
-			    		<div class="pageWrap" style="width:60px">
-			    		<ul id="pageSelect" style="transition:all 600ms">
-			    		<li class="sel-page">1</li></ul></div>
-			    		<button class="turnPage" id="nextPage">下一页</button>
+			    		<button class="turnPage" id="prePage">上一页</button><div class="pageWrap" style="width:120px">
+			    		<ul id="pageSelect" style="transition:all 600ms"><li class="sel-page">1</li>
+			    		<li class="selpage">2</li></ul></div><button class="turnPage" id="nextPage">下一页</button>
 			    		<button type="button" id="lastPage" class="last-page">尾页</button>
 			    		<input type="text" placeholder="1" class="jump-text" id="jumpText">
 			    		<button type="button" class="jump-button" id="jumpBtn">跳转</button>
-			    		<p class="total-pages">共&nbsp;1&nbsp;页</p>
-			    		<p class="total-count">合计 7条数据</p></div>
+			    		<p class="total-pages">共&nbsp;2&nbsp;页</p><p class="total-count">合计 11条数据</p></div>
 		    		</div>
 				</div>
 				</div>

@@ -175,9 +175,9 @@ body {
 				<span class="youxiu_up_exp_or_org visited" id="expert"
 					onclick="chooseI(1)">优秀专家</span>
 				<!--专家的更多，第二个是机构的更多-->
-				<span class="youxiu_up_more"><a href="">更多&nbsp;<img
+				<span class="youxiu_up_more"><a href="webPages/jiedu/more.jsp">更多&nbsp;<img
 						src="image/home/blue_head.png"></a></span> <span
-					class="youxiu_up_more Notdisplay"><a href="">更多&nbsp;<img
+					class="youxiu_up_more Notdisplay"><a href="webPages/jiedu/more2.jsp">更多&nbsp;<img
 						src="image/home/blue_head.png"></a></span>
 				<div class="xian1">
 					<div class="xian2"></div>
