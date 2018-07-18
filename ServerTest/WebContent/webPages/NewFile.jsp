@@ -2,12 +2,19 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+boolean hasLogin =false;
+
+String username = (String)request.getSession().getAttribute("username");
+if (username!= null){
+	hasLogin = true;
+}
+System.out.println(hasLogin);
 %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <base href="<%=basePath%>">
-<!-- this is 首页 -->
 <title>安徽省国家税务局税企互助交流平台</title>
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -37,12 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 	<div id="container">
-
-
-
-
-
-		<html>
+<html>
 <head>
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -80,6 +82,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="user">
 		<div class="user_content">
 
+		<%
+			if (username == null){
+				out.println("<a href=\"webPages/jiedu/login.jsp\" style=\"padding: 0 50px;\"> <img src=\"image/header/u198.png\" class=\"person\">\n");
+				out.println("</a>\n");
+				out.println("<div style=\"position: absolute; left: 20px; line-height: 0px;\">\n");
+				out.println("<div style=\"line-height: 13px;\">\n");
+				out.println("<a href=\"webPages/jiedu/login.jsp\">登录</a>\n");
+				out.println("</div>\n");
+				out.println("<div style=\"line-height: 13px;\">&nbsp;/&nbsp;</div>\n");
+				out.println("<div style=\"text-align: left; line-height: 13px;\">\n");
+				out.println("<a href=\"webPages/jiedu/register.jsp\">注册</a>\n");
+				out.println("</div>\n");
+				out.println("</div>\n");
+			}
+			else{
+				out.println("<a href=\"webPages/jiedu/login.jsp\" style=\"padding: 0 50px;\"> <img src=\"image/header/u198.png\" class=\"person\">\n");
+				out.println("</a>\n");
+				out.println("<div style=\"position: absolute; left: 20px; line-height: 0px;\">\n");
+				out.println("<div style=\"line-height: 13px;\">\n");
+				out.println("<a href=\"webPages/jiedu/login.jsp\">"+ username +"</a>\n");
+				out.println("</div>\n");
+				out.println("<div style=\"line-height: 13px;\">&nbsp;/&nbsp;</div>\n");
+				out.println("<div style=\"text-align: left; line-height: 13px;\">\n");
+				out.println("<a href=\"webPages/jiedu/register.jsp\">退出</a>\n");
+				out.println("</div>\n");
+				out.println("</div>\n");
+			}
+		
+		%>
+		<!-- 
 			<a href="webPages/jiedu/login.jsp" style="padding: 0 50px;"> <img
 				src="image/header/u198.png" class="person">
 			</a>
@@ -92,6 +124,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="webPages/jiedu/register.jsp">注册</a>
 				</div>
 			</div>
+		-->
 		</div>
 	</div>
 	<div style="width:1.7%;"> </div>
@@ -144,10 +177,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	<ul class="img clearfix">
 
-		<li><a href="#" class="" id="content"
+		<li><a class="" id="content"
 			style="background: url(images/1.png); background-size: 100% 100%;"></a></li>
 
-		<li><a href="#" class="" id="content"
+		<li><a  class="" id="content"
 			style="background: url(images/2.png); background-size: 100% 100%;"></a></li>
 
 	</ul>
