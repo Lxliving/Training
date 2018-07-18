@@ -1,8 +1,10 @@
 package com.tax.dao;
+import java.awt.List;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Stack;
 
 import com.tax.comm.DBUtil;
@@ -23,7 +25,7 @@ public class DB_share {
 	public void addShare(share sha) {
 		
 		PreparedStatement pstm = null;
-		String sql = "insert into share(shareID,shareName,seenNum,,keptNum,date,text) values (?,?,?,?,?,?)";
+		String sql = " insert into share (shareID,shareName,seenNum,keptNum,date,text) values(?,?,?,?,?,?);";
 		try {
 			pstm = db.getConPst(sql);
 			//设置参数
@@ -33,6 +35,7 @@ public class DB_share {
 			pstm.setInt(4, sha.getKeptNum());
 			pstm.setDate(5,(Date)sha.getDate());
 			pstm.setString(6, sha.getText());
+			pstm.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -110,12 +113,13 @@ public class DB_share {
 		}
 		return sha;
 	}
-	public Stack<share> Query() {
+	public ArrayList<share> Query() {
 		String sql = "select * from share order by seenNum";
 		int rowCount ;
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
-		Stack<share> sta = new Stack<share>();
+		ArrayList<share> al = new ArrayList<share>();
+		
 		try {
 			pstm = db.getConPst(sql);
 			rs = pstm.executeQuery();
@@ -127,13 +131,13 @@ public class DB_share {
 				sha.setKeptNum(rs.getInt("keptNum"));
 				sha.setDate(rs.getDate("date"));
 				sha.setText(rs.getString("text"));
-				sta.push(sha);
+				al.add(sha);
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
 			DBUtil.close(pstm, null);
 		}
-		return sta;
+		return al;
 	}
 }

@@ -20,7 +20,7 @@ public class DB_cons {
 			pstm.setInt(5, cons.getAnsNum());
 			pstm.setInt(6, cons.getKeptNum());
 			pstm.setDate(7, (Date) cons.getDate());
-			
+			System.out.println("添加一条数据到consult");
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {

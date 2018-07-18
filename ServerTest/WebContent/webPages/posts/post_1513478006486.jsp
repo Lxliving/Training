@@ -159,7 +159,7 @@ body {
 		<div class="uesr_who fl">
 			<div class="nani">
 				<span style="color: black;" class="uder_name"><a
-					href="/lagsms/users/u0001/zone">管理员</a></span> <span>发布</span>
+					href="webPages/userarea/personIntro.jsp">管理员</a></span> <span>发布</span>
 			</div>
 			<div class="nani">
 				时间： <span>2017-12-17</span>
