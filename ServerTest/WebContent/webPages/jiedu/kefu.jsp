@@ -72,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="chatright">
 					<p class="hotquestion">热点问题</p>
 					<div class="tax_type">
-					<ul>
+					<ul class = "questions">                                                                                           
 					<li style="padding:2px;">
 					<a onclick="question(0)" href="#">开票系统无法正常工作怎么办？</a></li>
 					<li style="padding:2px;">
@@ -107,46 +107,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<!-- 页面高度  -->
 	<script type="text/javascript">
-		// alert($(window).height()); 
-		var pagecount = 7;
-		var aa = $(window).height();
-		var aaheight = aa - 0;
-		$('#wrap').css('height',aaheight);
-		 var total = '12'; 
-		/*  console.log(total);  */
-		 var page = Math.ceil(total/pagecount);
-		 var  qustions=[];
-		  $("#demo1").jqPaginator({
-	            totalPages: page,		//分页总页数 
-	            visiblePages: 1,	//最多显示的页码数
-	            currentPage: 1,		//当前的页码
-	        	/* pageSize: total,			//总条目数 
-	            totalCounts: 10,		//每一页的条目数 */
-	            prev: '<li class="prev" style="padding:0px;border-radius: 5px;"><a href="javascript:void(0);">上一页<\/a><\/li>',
-	            next: '<li class="next" style="padding:0px;border-radius: 5px;"><a href="javascript:void(0);">下一页<\/a><\/li>',
-	            page: '<li class="page"><a href="javascript:void(0);"> {{page}} / {{totalPages}} <\/a><\/li>',
-	            onPageChange: function (page) {
-	                $.get("/lagsms/customer/searchCustomer",{
-	                	page: page,
-	                	rows:pagecount,
-	            }, function(data) {
-	            	qustions = data
-	            	/* console.log(JSON.stringify(data) ); */
-	            	 var dataHTML = data.map(function(value, index, array){
-	            		return '<li style="padding:2px;"><a onclick="question('+ index  +')" href="#">'+value.hotIssue+'</a></li>';
-	        		 }); 
-	            	/*  console.log(dataHTML); */
-	        		$(".tax_type").html(dataHTML); 
-	            });
-	            }
-	        });
-		/* } */
-		  //点击热门咨询列表
-		  function question(index){
-			  console.log("选择----",JSON.stringify(qustions[index].hotIssue));
-			  var selcteQuestion= qustions[index].hotIssue
-			  sendClick(selcteQuestion);
-		  }
+	
 		  //获取输入值 改变sendbtn 颜色
 		  $('textarea').bind('input propertychange', function() {
 	            var buttons = document.getElementById("sendBtn");
@@ -202,99 +163,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  }else{
 				  questionMess = mess;
 			  }
-			  //字典 配置请求值
-			  var http_List = [{"dictData":"12","dictName":"requestNo"},{"dictData":"1","dictName":"fromUserName"},{"dictData":"2","dictName":"msgType"},{"dictData":"3","dictName":"content"},{"dictData":"4","dictName":"createTime"},{"dictData":"5","dictName":"userNickName"},{"dictData":"6","dictName":"customerName"},{"dictData":"7","dictName":"paperNo"},{"dictData":"8","dictName":"customerType"},{"dictData":"9","dictName":"customerLevel"},{"dictData":"10","dictName":"telphoneNo"},{"dictData":"11","dictName":"provice"},{"dictData":"12","dictName":"city"},{"dictData":"13","dictName":"brand"},{"dictData":"189665AD","dictName":"appid"},{"dictData":"http://79.12.115.2:8080/pq-usp-web/USPServlet?","dictName":"httpUrl"}]; 
-			  //去空格
-			  questionMess.replace("/(^\s+)|(\s+$)/g","");
-			  //时间戳
-			  var timestamp = (new Date()).valueOf(); 
-			   var liushuiData,messtypeData,httpUrl,appidname,appidData;
-			    liushuiData = http_List[0].dictData ;
-			    messtypeData = http_List[2].dictData ; 
-			    httpUrl = http_List[15].dictName ;
-			    appidname =  http_List[14].dictName ;
-			    appidData = http_List[14].dictData ; 
-			     var dataJson = [{
-			    	   "requestNo" : liushuiData ,                    //业务流水号
-					   "content" : questionMess ,                 //问题
-					   "fromUserName" : userId ,                  //用户ID
-					   "msgType" : messtypeData ,                 //消息类型 默认 text
-					   "createTime":timestamp ,                   //创建时间 int	
-					   "url":httpUrl,
-					   "appid":appidData
-		            }]    
-			     var url = httpUrl+appidname + '=' + appidData;
-			  
-			     $.ajax({
-			         url:"/lagsms/sendCustomer?questions="+ questionMess ,
-			   		type:'post',
-			   		dataType:'json',
-			   		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			   			console.log("响应状态:["+XMLHttpRequest.status+"]-");
-			   			console.log("完成状态:["+XMLHttpRequest.readyState+"]-");
-			   			console.log("异常情况:["+textStatus+"]");
-			   			console.log("抛出错误:["+ errorThrown+"]");
-			   			
-			   			},
-			   		success:function(data){
-			   			console.log("返回---",JSON.stringify(data));
-			   		 if (data.responseCode == "000000") {
-	                      //返回的模拟数据
-	      		          var dataArray = new Array();
-	      		          dataArray.push(data);
-	      		        //创建时间
-	      		        var date =  new Date();
-	      		        console.log("格式化时间--",formatDateTime(date));
-	      		        var dataHTML = dataArray.map(function(value, index, array){
-	      				return	'<div class="message clearfix">' +
-	            			    '<p class="content-time"><span class="content-time-span">'+  formatDateTime(date) +'</span></p>'+
-	            			    '<img class="pic" src="image/icon/user_avatar.png">'+
-	            			   '<div class="text-style">' +
-	            			       ' <div class="pos">'+
-	            			           '<div class="bubble">' +
-	            			             '<div class="plain">' +  value.rawtext + '</div>'+
-	            			           '</div>' +
-	            			       '</div>' + 
-	            			    '</div>'+
-	            			'</div>' +
-	            			'<div class="message clearfix">'+
-	            			 '<p class="content-time"><span class="content-time-span">'+ formatDateTime(date) +'</span></p>'+
-	            			   '<img class="pic-left" src="image/icon/robothead.png">'+ 
-	            			   ' <div class="text-style-left">'+
-	            			      '<div class="pos-left">'+  
-	            			         '<div class="bubble">' +  
-	            			              '<div class="plain">' +  value.content + '</div>'+
-	            			           '</div>' +
-	            			        '</div>'+
-	            			   '</div>'+ 
-	            			'</div>'  ;
-	            		}) ;
-	      		        $(".mess_news").html(dataHTML);  
-	      		      //滚动条到底部
-	      			  var boxId="scrolldIV";
-	      			  var boxElement=document.getElementById(boxId);
-	      			  boxElement.scrollTop=boxElement.scrollHeight-boxElement.clientHeight;
-	                    } else if(data.responseCode == '100001') {
-	                      alert("请求数据为空！");
-	                    }else if(data.responseCode == '100002') {
-	                      alert("请求渠道号为空！");
-	                    }else if(data.responseCode == '100003') {
-	                      alert("请求渠道号不正确或已经禁用！");
-	                    }else if(data.responseCode == '10000') {
-	                      alert("指令不存在或非法指令！");
-	                    }else if(data.responseCode == '100009') {
-	                      alert("请求文本为空！");
-	                    }else if(data.responseCode == '100013') {
-	                      alert("请求参数中必填字段为空！");
-	                    }else if(data.responseCode == '110001') {
-	                      alert("不支持此请求格式！");
-	                    }else if(data.responseCode == '200002') {
-	                      alert("语义返回结果为空！");
-	                    }else if(data.responseCode == '200003') {
-	                      alert("语义理解此句有敏感词！");
-	                    }
-			   		}
-			     });               
+			
 		}
 	</script>
 </body>
