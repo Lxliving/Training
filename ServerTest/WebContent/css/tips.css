@@ -97,7 +97,7 @@ width: 90px;
 	background: rgba(26,86,169,1.00)
   
 } 
-.question ul li input{
+/*.question ul li input{
 		color: black;
     font-size: 15px;
 		 background-color:transparent;
@@ -107,7 +107,7 @@ width: 90px;
 		cursor:pointer;
 	
 }
-/*	.star_btn{
+	.star_btn{
 		color: black;
     font-size: 15px;
 		 background-color:transparent;
