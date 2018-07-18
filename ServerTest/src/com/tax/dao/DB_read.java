@@ -30,6 +30,7 @@ public class DB_read {
 			pstm.setInt(4, rea.getKeptNum());
 			pstm.setDate(5,(Date)rea.getDate());
 			pstm.setString(6, rea.getText());
+			pstm.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {

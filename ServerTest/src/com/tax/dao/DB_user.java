@@ -23,7 +23,7 @@ public class DB_user {
 			pstm.setString(2, use.getPsw());
 			pstm.setString(3, use.getPhone());
 			pstm.setString(4, use.getEmail());
-			
+			pstm.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
