@@ -9,6 +9,7 @@ if(username!=null){
 	hasLogined = true;
 }
 
+System.out.println(hasLogined);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -20,7 +21,7 @@ if(username!=null){
 <link rel="stylesheet" type="text/css" href="css/paging.css" />
 <link rel="stylesheet" type="text/css" href="css/question.css" />
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script> 
-<script type="text/javascript" src="js/if_login.js"></script> 
+<!-- <script type="text/javascript" src="js/if_login.js"></script>  -->
 <link rel="stylesheet" href="css/tips.css" />
 <link rel="stylesheet" href="css/ScreenChange.css" /> 
 
@@ -106,7 +107,7 @@ if(username!=null){
 						onblur="if(this.value == '') this.value = this.defaultValue" />
 						<button type="submit" class="searchbtn"></button>
 					</form>
-					<button onclick="ques();" class="consultation">我要咨询</button>
+					<button onClick="ques();" class="consultation">我要咨询</button>
 				</div>
 				<div class="choice" id="choice" style="height: 40px;">
 					<ul>
@@ -250,7 +251,7 @@ if(username!=null){
 											<span>分类：</span>
 											<span>发票系统故障及操作指导,发票领购</span>
 										</li>
-										<li	onclick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
+										<li	onClick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
 									</ul>
 							</div>
 							
@@ -302,7 +303,7 @@ if(username!=null){
 											<span>分类：</span>
 											<span>发票系统故障及操作指导,发票领购</span>
 										</li>
-										<li	onclick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
+										<li	onClick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
 									</ul>								
 							</div>
 								<div id="quesPaging_2" class="box_2">
@@ -357,7 +358,7 @@ if(username!=null){
 											<span>分类：</span>
 											<span>发票系统故障及操作指导,发票领购</span>
 										</li>
-										<li	onclick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
+										<li	onClick="star()" style="float:right;cursor:pointer;"><span class="star">收藏</span></li>
 									</ul>								
 							</div>
 								<div id="quesPaging_3" class="box_3">
@@ -415,9 +416,10 @@ document.getElementById("zuixinzixun").style.display="none";
 document.getElementById("hot").style.display="none";
 document.getElementById("xuanshang").style.display="block";
 }
+
 function star(){
- 
-if(hasLogin==false){
+	var x=<%=hasLogined%>;
+if(x==false){
 	$(".mask").css("opacity","0.3").show(); 
 	//制作对话框 
 	showDialog(); 
@@ -426,29 +428,61 @@ if(hasLogin==false){
 }
 
 else{
-
-	var x=document.getElementByClassName("star").value;
-	x.innerHTML="未收藏";
-     }
-	};
+	event.stopPropagation();
+	document.getElementsByClassName("star").innerText="未收藏";
+	
+    }
+};
 
 function ques(){
 		 
-		if(hasLogin==false){
-		//	$(".mask").css("opacity","0.3").show(); 
-			//制作对话框 
-		//	showDialog(); 
-			//展现css的特效 
-		//	$(".dialog").show(); 
-			window.location.replace='webPages/zixun/Wo_Yao_Zi_Xun.jsp';
-		}
+	var x=<%=hasLogined%>;
+	if(x==false){
+		$(".mask").css("opacity","0.3").show(); 
+		//制作对话框 
+		showDialog(); 
+		//展现css的特效 
+		$(".dialog").show(); 
+	}
 
-		else{
-
+	else{
 		window.location.href='webPages/zixun/Wo_Yao_Zi_Xun.jsp';
-		     }
+		
+	    }
 			};
-
+function showDialog(){ 
+				var objw=$(window);//获取当前窗口 
+				var objc=$(".dialog");//获取当前对话框 
+				var brsw=objw.width(); //获取页面宽度 
+				var brsh=objw.height(); //获取页面高度 
+				var sclL=objw.scrollLeft(); //获取页面左滑动条信息 
+				var sclT=objw.scrollTop(); 
+				var curw=objc.width(); //获取对话框宽度 
+				var curh=objc.height(); //获取对话框高度 
+				  
+				var left=sclL+(brsw -curw)/2; //计算对话框居中时的左边距 
+				var top=sclT+(brsh-curh)/2; //计算对话框居中时的上边距 
+				  
+				  
+				objc.css({"left":left,"top":top}); //设置对话框居中 
+			}
+$(".title img").click(function(){ 
+	//隐藏效果 
+	$(".dialog").hide(); 
+	$(".mask").hide(); 
+	  
+	}); 
+	//取消按钮事件 
+	$("#noOk").click(function(){ 
+	$(".dialog").hide(); 
+	$(".mask").hide(); 
+	}); 
+	  
+	//确定按钮事假 
+	$("#ok").click(function(){ 
+	$(".dialog").hide(); 
+	$(".mask").hide(); 
+	});
 </script>
 
 <head>

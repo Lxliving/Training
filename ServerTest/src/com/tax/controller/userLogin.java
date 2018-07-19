@@ -45,7 +45,7 @@ public class userLogin extends HttpServlet {
 		String userID = request.getParameter("username");
 		String psw = request.getParameter("password");
 		PrintWriter out = response.getWriter();
-		
+		boolean hasLogined ;
 		if (userID == null || "".equals(userID.trim())||psw == null || "".equals(psw.trim())) {
 			System.out.println("用户名或者密码不能为空");
 		}
@@ -53,8 +53,10 @@ public class userLogin extends HttpServlet {
 		DB_user dbu = new DB_user();
 		if(dbu.loginVerify(userID, psw)) {
 			System.out.println("登陆成功");
+			hasLogined = true;
 			request.getSession().setAttribute("username", userID);
-			response.sendRedirect("loginVerify");
+			request.getSession().setAttribute("hasLogined", hasLogined);
+			response.sendRedirect("webPages/NewFile.jsp");
 			
 		}else {
 			out.print("<script>alert('登录失败!');window.location.href='http://localhost:8080/ServerTest/webPages/jiedu/login.jsp'</script>");

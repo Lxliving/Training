@@ -2,6 +2,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -64,6 +65,9 @@ float:right;
 </style>
 </head>
 <body>
+<form action="userLogin " method="post">
+	<input type="submit" value="post方式"/>
+</form>
 	<div class="top" style="display: flex; justify-content: space-around;">
 		<div class="logo"></div>
 		<div class="daohang">
@@ -160,7 +164,7 @@ float:right;
 
 <div class="content">
 		<div class="content_main">
-			<form class="content_login" id="loginForm" action="check" method="post" onsubmit="return login();">
+			<form class="content_login" id="loginForm" action="userLogin" method="post" onsubmit="return login();">
 				<ul class="login_opacity">
 					<li>
 						<span style="font-size: 20px;">登录系统</span>
@@ -178,7 +182,7 @@ float:right;
 					<li class="login_yzm">
 						<div><input  data-ok="0" id="yanzhengma" type="text"  style="width: 64%;"></div>
 						<a id="yanzhengma">
-							<img onclick="changeValiImage(this);" src="yzmServlet" alt="验证码">
+							<img id = "ima1" onclick="changeValiImage(this);" src="yzmServlet" alt="验证码">
 						</a>
 						<span id="code1" style="display:inline-block;"></span>
 						
@@ -188,7 +192,7 @@ float:right;
 						<a id ="fp" style="cursor:pointer" onclick="report();">忘记密码</a>
 					</li>
 					<li>
-						<button id="submit_btn" type="button" onclick="save()">登录</button>
+						<button id="submit_btn" type="submit" >登录</button>
 						<div><a href="webPages/jiedu/register.jsp" style="color: #1B55A9;" id="register">立即注册<img src="image/login/z_c.png" alt=""></a></div>
 					</li> 
 				</ul>

@@ -18,7 +18,7 @@ public class DB_user {
 		String sql = "insert into user(userID,psword,phone,email) values (?,?,?,?)";
 		try {
 			pstm = db.getConPst(sql);
-			//设置参数
+			//璁剧疆鍙傛暟
 			pstm.setString(1, use.getUserID());
 			pstm.setString(2, use.getPsw());
 			pstm.setString(3, use.getPhone());
@@ -37,7 +37,7 @@ public class DB_user {
 		String sql = "update user set psword = ?,phone = ?,email = ? where userID = ?";
 		try {
 			pstm = db.getConPst(sql);
-			//设置参数
+			//璁剧疆鍙傛暟
 			pstm.setString(4, use.getUserID());
 			pstm.setString(1, use.getPsw());
 			pstm.setString(2, use.getPhone());
@@ -58,7 +58,7 @@ public class DB_user {
 		try {
 			String sql = "select * from user where userID = ' "+ userID;
 			pstm = db.getConPst(sql);
-			//rs保存结果集
+			//rs淇濆瓨缁撴灉闆�
 			rs = pstm.executeQuery();
 			while(rs.next()) {
 				use.setUserID(rs.getString("userID"));
@@ -75,7 +75,7 @@ public class DB_user {
 	}
 	
 	/**
-	 * 登陆验证，验证用户是否可以成功登陆
+	 * 鐧婚檰楠岃瘉锛岄獙璇佺敤鎴锋槸鍚﹀彲浠ユ垚鍔熺櫥闄�
 	 * @return boolean 
 	 */
 	public boolean loginVerify(String userID,String psw) {
@@ -83,7 +83,7 @@ public class DB_user {
 		boolean isValid = false;
 		PreparedStatement pstm = null;
 		ResultSet rs = null;
-		//trim 函数去掉ID和psw前后端的空格
+		//trim 鍑芥暟鍘绘帀ID鍜宲sw鍓嶅悗绔殑绌烘牸
 		try {
 			String sql = "select * from user where userID = ? and psword = ?";
 			pstm = db.getConPst(sql);
